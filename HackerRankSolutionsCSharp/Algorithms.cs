@@ -55,6 +55,65 @@ namespace HackerRankSolutionsCSharp
 			return result;
 		}
 
+		public static long aVeryBigSum(List<long> ar)
+        {
+			/*
+			 *In this challenge, you are required to calculate and 
+			 *print the sum of the elements in an array,
+			 *keeping in mind that some of those integers may be quite large.
+			 */
+
+			long sum = 0;
+			for (int i = 0; i < ar.Count; i++)
+				sum += ar[i];
+			
+			return sum;
+		}
+
+		public static int DiagonalDifference(List<List<int>> ar)
+		{
+			/*
+			 *Given a square matrix,
+			 *calculate the absolute difference between the sums of its diagonals.
+			 */
+
+			int sum = 0;
+			int columncounter = 0;
+			int rowcounter = 0;
+            while (true)
+            {
+				sum += ar[rowcounter][columncounter];
+				rowcounter++;
+				columncounter++;
+            }
+		}
+
+		/*
+		 * Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero.
+		 * Print the decimal value of each fraction on a new line with  places after the decimal.
+		 */
+		public static void PlusMinus(List<int> arr)
+		{
+			decimal poscount = 0;
+			decimal negcount = 0;
+			decimal zerocount = 0;
+			decimal arrsize = arr.Count;
+			for (int i = 0; i < arr.Count; i++)
+			{
+				if (arr[i] > 0)
+					poscount++;
+				else if (arr[i] < 0)
+					negcount++;
+				else
+					zerocount++;
+			}
+			decimal posratio = (poscount / arrsize);
+			decimal negratio = (negcount / arrsize);
+			decimal zeroratio = (zerocount / arrsize);
+			Console.WriteLine(posratio.ToString("N6"));
+			Console.WriteLine(negratio.ToString("N6"));
+			Console.WriteLine(zeroratio.ToString("N6"));
+		}
 
 	}
 }

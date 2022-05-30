@@ -13,7 +13,8 @@ namespace HackerRankSolutionsCSharp
             SolveMeFirstSetup();
             SimpleArraySetup();
             CompareTheTripletsSetup();
-
+            AVeryBigSumSetup();
+            PlusMinusSetup();
 
 
             Console.WriteLine("Press any key to exit");
@@ -40,5 +41,26 @@ namespace HackerRankSolutionsCSharp
             List<int> result = Algorithms.CompareTheTriplets(alice, bob);
             Console.WriteLine($"CompareTheTriplets for Alice and Bob, Alice score = {result[0]} Bob score = {result[1]}");
         }
+
+        public static void AVeryBigSumSetup()
+        {
+            List<long> ar = new List<long>() { 1000000001,1000000002,1000000003,1000000004,1000000005 };
+            long sum = Algorithms.aVeryBigSum(ar);
+            Console.WriteLine($"aVeryBigSum for input array = {sum}");
+        }
+
+        public static void DiagonalDifferenceSetup()
+        {
+            List<long> ar = new List<long>() { 1000000001, 1000000002, 1000000003, 1000000004, 1000000005 };
+            long sum = Algorithms.aVeryBigSum(ar);
+            Console.WriteLine($"aVeryBigSum for input array = {sum}");
+        }
+
+        public static void PlusMinusSetup()
+        {
+            int[] ar = { -4,3,-9,0,4,1 };
+            Algorithms.PlusMinus(ar.ToList());
+        }
+
     }
 }
