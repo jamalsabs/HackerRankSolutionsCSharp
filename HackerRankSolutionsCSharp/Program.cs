@@ -15,6 +15,7 @@ namespace HackerRankSolutionsCSharp
             CompareTheTripletsSetup();
             AVeryBigSumSetup();
             PlusMinusSetup();
+            StairCaseSetup();
 
 
             Console.WriteLine("Press any key to exit");
@@ -60,6 +61,12 @@ namespace HackerRankSolutionsCSharp
         {
             int[] ar = { -4,3,-9,0,4,1 };
             Algorithms.PlusMinus(ar.ToList());
+        }
+
+        public static void StairCaseSetup()
+        {
+            int staircasesize = 4;
+            Algorithms.StairCase(staircasesize);
         }
 
     }

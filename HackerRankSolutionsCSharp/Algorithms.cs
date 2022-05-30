@@ -88,11 +88,11 @@ namespace HackerRankSolutionsCSharp
             }
 		}
 
-		/*
+        /*
 		 * Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero.
 		 * Print the decimal value of each fraction on a new line with  places after the decimal.
 		 */
-		public static void PlusMinus(List<int> arr)
+        public static void PlusMinus(List<int> arr)
 		{
 			decimal poscount = 0;
 			decimal negcount = 0;
@@ -113,6 +113,19 @@ namespace HackerRankSolutionsCSharp
 			Console.WriteLine(posratio.ToString("N6"));
 			Console.WriteLine(negratio.ToString("N6"));
 			Console.WriteLine(zeroratio.ToString("N6"));
+		}
+
+		/*
+		 * Its base and height are both equal to.
+		 * It is drawn using # symbols and spaces. The last line is not preceded by any spaces.
+		 */
+		public static void StairCase(int staircasesize)
+		{
+            for (int i = 0; i < staircasesize; i++)
+            {
+				string s = new string('#', i + 1).PadLeft(staircasesize, ' ');
+				Console.WriteLine(s);
+			}
 		}
 
 	}
